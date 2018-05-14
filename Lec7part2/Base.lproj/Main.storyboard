@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +15,113 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lec7part2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Apple Logo On Galaxy Background iPhone 5 Wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="bUm-cj-F6e">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z9B-3X-vCk">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zat-Az-cAY">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FM6-9G-DWz">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="s07-v8-mJp">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="light"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FqX-X2-qxX">
+                                <rect key="frame" x="16" y="522" width="85" height="30"/>
+                                <state key="normal" title="Show Dialog">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="showCustomDialog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LWe-zY-Fca"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="z9B-3X-vCk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="6HX-z4-Mq4"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="bUm-cj-F6e" secondAttribute="bottom" id="Cs9-0d-pjY"/>
+                            <constraint firstItem="bUm-cj-F6e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DSF-OU-jUq"/>
+                            <constraint firstAttribute="bottom" secondItem="FqX-X2-qxX" secondAttribute="bottom" constant="16" id="NIO-Bb-H8j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z9B-3X-vCk" secondAttribute="trailing" id="SUG-cA-RrV"/>
+                            <constraint firstItem="FqX-X2-qxX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="eAH-Yz-2cB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bUm-cj-F6e" secondAttribute="trailing" id="fB6-lH-Ut2"/>
+                            <constraint firstItem="bUm-cj-F6e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fUU-H3-4nh"/>
+                            <constraint firstItem="z9B-3X-vCk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tSY-9e-5vm"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="z9B-3X-vCk" secondAttribute="bottom" id="u3B-nh-dnu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="blurView" destination="z9B-3X-vCk" id="Ymt-bD-kmK"/>
+                        <outlet property="dialogView" destination="deX-6s-dIG" id="jON-Y2-5cG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="deX-6s-dIG">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WS-Cc-eLx">
+                            <rect key="frame" x="16" y="16" width="208" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.2823187654" blue="0.18727225859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="0WS-Cc-eLx" firstAttribute="leading" secondItem="AZi-y5-uia" secondAttribute="leading" constant="16" id="7Rb-Wm-BQh"/>
+                        <constraint firstItem="AZi-y5-uia" firstAttribute="trailing" secondItem="0WS-Cc-eLx" secondAttribute="trailing" constant="16" id="Wib-km-dx7"/>
+                        <constraint firstItem="0WS-Cc-eLx" firstAttribute="top" secondItem="AZi-y5-uia" secondAttribute="top" constant="16" id="fft-WJ-NMJ"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="AZi-y5-uia"/>
+                </view>
             </objects>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="ljm-fa-phr">
+            <objects>
+                <viewController id="oO7-7x-zlF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PYR-R7-3Tt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9kB-u4-I3l">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="142"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9kB-u4-I3l" firstAttribute="top" secondItem="PYR-R7-3Tt" secondAttribute="top" id="EDi-Z0-PPt"/>
+                            <constraint firstItem="9kB-u4-I3l" firstAttribute="height" secondItem="PYR-R7-3Tt" secondAttribute="height" multiplier="0.25" id="Keh-2F-RHR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="17s-sn-7HX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qFz-Dg-d1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="766.875" y="40.140845070422536"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Apple Logo On Galaxy Background iPhone 5 Wallpaper" width="640" height="1136"/>
+    </resources>
 </document>
